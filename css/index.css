@@ -10,6 +10,20 @@
   }
 }
 
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0)
+  }
+
+  20%, 60% {
+    transform: rotate(-25deg)
+  }
+
+  40%, 80% {
+    transform: rotate(10deg)
+  }
+}
+
 #client, #server {
   display: flex;
   min-height: 225px
@@ -189,6 +203,10 @@
   writing-mode: vertical-rl
 }
 
+.octo-arm {
+  transform-origin: 130px 106px
+}
+
 .tag {
   margin: 24px 18px 0 0;
   opacity: 0.8;
@@ -207,6 +225,10 @@
 .tag>span>a, .tag>a {
   color: inherit;
   padding: 2px
+}
+
+a#github {
+  z-index: 1000
 }
 
 code {
@@ -254,6 +276,20 @@ input, code {
   width: 100%
 }
 
+svg#github {
+  fill: #000;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+  z-index: 1000
+}
+
+svg#github:hover .octo-arm {
+  animation: wave 560ms ease-in-out
+}
+
 @media (prefers-color-scheme: dark) {
   .description {
     -webkit-box-shadow: 0 -3px #161616 !important;
@@ -271,7 +307,12 @@ input, code {
     border: 3px solid #161616 !important;
     box-shadow: 0 3px #161616 !important
   }
-  
+
+  svg#github {
+    fill: #fff !important;
+    color: #000 !important
+  }
+
   #legend>.pill>span.code-description {
     -webkit-box-shadow: 0 2px #161616 !important;
     background: #0c0c0c !important;
@@ -280,11 +321,17 @@ input, code {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  svg#github:hover .octo-arm {
+    animation: none !important
+  }
+}
+
 @media only screen and (max-width: 769px) {
   #intro {
     padding-right: 0
   }
-  
+
   #terminal {
     display: block;
     min-width: auto;

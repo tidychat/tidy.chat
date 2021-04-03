@@ -1,0 +1,313 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.5);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 128, 0, 0.5)
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0)
+  }
+}
+
+#client, #server {
+  display: flex;
+  min-height: 225px
+}
+
+#intro {
+  padding-right: 20px;
+  width: 25%
+}
+
+#legend {
+  margin-bottom: 10px !important
+}
+
+#legend>.pill>span {
+  padding: 0 3px 0 5px
+}
+
+#legend>.pill>span, .tag>span, .tag>span>a, .tag>a {
+  font-size: 12px
+}
+
+#legend>.pill {
+  display: inline-block
+}
+
+#legend>.pill>span.bad {
+  -webkit-box-shadow: 0 2px #c80900 !important;
+  background: #ff2015 !important;
+  border: 1px solid #c80900 !important;
+  box-shadow: 0 2px #c80900 !important
+}
+
+#legend>.pill>span.code {
+  -webkit-box-shadow: 0 2px #004c9f;
+  background: #0065d2;
+  border: 1px solid #004c9f;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  box-shadow: 0 2px #004c9f;
+  color: #fff;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 1px 5px
+}
+
+#legend>.pill>span.code-description {
+  -webkit-box-shadow: 0 2px #ebebeb;
+  background: #fbfbfb;
+  border: 1px solid #ebebeb;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  box-shadow: 0 2px #ebebeb;
+  color: inherit;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 1px 5px
+}
+
+#legend>.pill>span.ok {
+  -webkit-box-shadow: 0 2px #006400 !important;
+  background: green !important;
+  border: 1px solid #006400 !important;
+  box-shadow: 0 2px #006400 !important
+}
+
+#response-time {
+  visibility: hidden
+}
+
+#response-time::after {
+  clear: both;
+  content: 'ms (from NYC)'
+}
+
+#response-time::before {
+  clear: both;
+  content: 'Took '
+}
+
+#server .description::before {
+  background-image: url(../meta/thumbnail.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  clear: both;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  margin: 0;
+  padding: 0 15px 0 0;
+  transform: rotate(90deg)
+}
+
+#server.bad>code {
+  -webkit-box-shadow: 0 3px #ff2015 !important;
+  border: 3px solid #ff2015 !important;
+  box-shadow: 0 3px #ff2015 !important
+}
+
+#server.bad>span {
+  -webkit-box-shadow: 0 -3px #ff2015 !important;
+  background: #ff2015 !important;
+  box-shadow: 0 -3px #ff2015 !important;
+  color: #fff !important
+}
+
+#server.ok .description::before, #server.bad .description::before, #server.info .description::before {
+  background-image: url(../meta/thumbnail_white.png)
+}
+
+#server.ok>code {
+  -webkit-box-shadow: 0 3px green !important;
+  border: 3px solid green !important;
+  box-shadow: 0 3px green !important
+}
+
+#server.ok>span {
+  -webkit-box-shadow: 0 -3px green !important;
+  background: green !important;
+  box-shadow: 0 -3px green !important;
+  color: #fff !important
+}
+
+#server.info>code {
+  -webkit-box-shadow: 0 3px #e700e7 !important;
+  border: 3px solid #e700e7 !important;
+  box-shadow: 0 3px #e700e7 !important
+}
+
+#server.info>span {
+  -webkit-box-shadow: 0 -3px #e700e7 !important;
+  background: #e700e7 !important;
+  box-shadow: 0 -3px #e700e7 !important;
+  color: #fff !important
+}
+
+#status {
+  border-radius: 100%;
+  display: block;
+  margin-right: 15px;
+  margin-top: -42px;
+  position: absolute;
+  right: 0
+}
+
+#status.bad {
+  color: #ff2015
+}
+
+#status.connect {
+  color: orange
+}
+
+#status.ok {
+  animation: pulse 1s infinite ease-in-out;
+  color: green
+}
+
+#terminal {
+  display: flex;
+  flex-flow: column;
+  padding-left: 20px;
+  width: 75%
+}
+
+.description {
+  -webkit-box-shadow: 0 -3px #ebebeb !important;
+  background: #ebebeb;
+  border-bottom-right-radius: 14px;
+  border-top-right-radius: 14px;
+  box-shadow: 0 -3px #ebebeb !important;
+  float: left;
+  margin: 10px -2px 10px 0;
+  padding: 15px;
+  text-align: center;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl
+}
+
+.tag {
+  margin: 24px 18px 0 0;
+  opacity: 0.8;
+  position: absolute;
+  right: 0
+}
+
+.tag>span {
+  background: #ebebeb;
+  border-radius: 4px;
+  font-family: 'Ubuntu Mono' !important;
+  font-weight: 400;
+  padding: 4px 6px
+}
+
+.tag>span>a, .tag>a {
+  color: inherit;
+  padding: 2px
+}
+
+code {
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  -webkit-user-select: text !important;
+  border-radius: 0 !important;
+  border-bottom-right-radius: 14px !important;
+  border-top-right-radius: 14px !important;
+  font-family: 'Ubuntu Mono' !important;
+  font-weight: 700;
+  overflow: auto;
+  padding: 13px 15px !important;
+  tab-size: 2 !important;
+  user-select: text !important;
+  white-space: pre !important
+}
+
+img {
+  height: 180px
+}
+
+input {
+  border-radius: 14px !important;
+  color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  height: 48px;
+  outline: none;
+  padding: 8px 40px 8px 10px;
+  transition: all .1s ease-in-out
+}
+
+input, code {
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 3px #ebebeb !important;
+  background: #fbfbfb !important;
+  border: 3px solid #ebebeb !important;
+  box-shadow: 0 3px #ebebeb !important;
+  box-sizing: border-box !important;
+  color: inherit !important;
+  display: block;
+  margin: 10px 0 !important;
+  text-shadow: none !important;
+  width: 100%
+}
+
+@media (prefers-color-scheme: dark) {
+  .description {
+    -webkit-box-shadow: 0 -3px #161616 !important;
+    background: #161616;
+    box-shadow: 0 -3px #161616 !important
+  }
+
+  .tag>span {
+    background: #161616
+  }
+
+  input, code {
+    -webkit-box-shadow: 0 3px #161616 !important;
+    background: #0c0c0c !important;
+    border: 3px solid #161616 !important;
+    box-shadow: 0 3px #161616 !important
+  }
+  
+  #legend>.pill>span.code-description {
+    -webkit-box-shadow: 0 2px #161616 !important;
+    background: #0c0c0c !important;
+    border: 1px solid #161616 !important;
+    box-shadow: 0 2px #161616 !important
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  #intro {
+    padding-right: 0
+  }
+  
+  #terminal {
+    display: block;
+    min-width: auto;
+    padding-left: 0;
+    padding-top: 30px
+  }
+
+  #legend {
+    margin-top: 10px !important
+  }
+
+  #status {
+    display: inline-block;
+    float: right;
+    margin-top: -40px;
+    position: relative
+  }
+
+  .tag {
+    margin: 15px 30px 0 0 !important
+  }
+
+  input, code, .description {
+    margin: 8px 0 !important
+  }
+}

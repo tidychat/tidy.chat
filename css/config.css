@@ -1,0 +1,138 @@
+#content {
+  width: 65%
+}
+
+#result {
+  user-select: none
+}
+
+input, #result {
+  align-self: flex-end;
+  border: none !important;
+  color: inherit !important;
+  font-family: inherit !important;
+  font-size: 16px !important;
+  margin: 15px 0 0 15px !important;
+  padding: 8px 10px !important
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+input, textarea, #result {
+  -webkit-box-shadow: 0 3px #ebebeb !important;
+  background: #fbfbfb !important;
+  border: 3px solid #ebebeb !important;
+  border-radius: 14px !important;
+  box-shadow: 0 3px #ebebeb !important;
+  transition: all .1s ease-in-out
+}
+
+#result.error {
+  -webkit-box-shadow: 0 3px #cc7000 !important;
+  background: #ff981a !important;
+  border: 3px solid #cc7000 !important;
+  box-shadow: 0 3px #cc7000 !important;
+  color: #FFF !important
+}
+
+#result.error>p::before, #result.exception>p::before {
+  content: '\f071'
+}
+
+#result.exception {
+  -webkit-box-shadow: 0 3px #c80900 !important;
+  background: #ff2015 !important;
+  border: 3px solid #c80900 !important;
+  box-shadow: 0 3px #c80900 !important;
+  color: #FFF !important
+}
+
+#result.success {
+  -webkit-box-shadow: 0 3px #006400 !important;
+  background: green !important;
+  border: 3px solid #006400 !important;
+  box-shadow: 0 3px #006400 !important;
+  color: #FFF !important
+}
+
+#result.success>p::before {
+  content: '\f058'
+}
+
+#result>p {
+  display: inline-block;
+  margin: 0
+}
+
+#result>p::before {
+  content: '\f141';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  padding-right: 5px
+}
+
+.hidden {
+  display: none !important
+}
+
+code {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 5px;
+  user-select: all;
+  vertical-align: middle
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  height: 60%;
+  width: 100%
+}
+
+input {
+  cursor: pointer;
+  outline: none
+}
+
+input:hover:enabled {
+  -webkit-box-shadow: 0 3px #0065d2 !important;
+  border: 3px solid #0065d2 !important;
+  box-shadow: 0 3px #0065d2 !important
+}
+
+textarea {
+  box-sizing: border-box !important;
+  color: inherit;
+  font-family: 'Ubuntu Mono' !important;
+  font-size: inherit;
+  height: 100%;
+  line-height: 26px;
+  min-height: 400px;
+  outline: none;
+  overflow-x: hidden;
+  padding: 22px 26px;
+  resize: none;
+  width: 100%
+}
+
+@media (prefers-color-scheme: dark) {
+  input, textarea, #result {
+    -webkit-box-shadow: 0 3px #161616 !important;
+    background: #0c0c0c !important;
+    border: 3px solid #161616 !important;
+    box-shadow: 0 3px #161616 !important
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  #content {
+    padding: 40px;
+    width: calc(100% - 80px) !important
+  }
+}

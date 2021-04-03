@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>tidychat</title>
+  <link href="./css/prism.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet" />
+  <link href="./css/index.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/prism.js"></script>
+  <script src="./js/tidychat.js"></script>
+  <script src="./js/core.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="./meta/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./meta/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./meta/favicon-16x16.png">
+  <link rel="manifest" href="./meta/site.webmanifest">
+  <link rel="mask-icon" href="./meta/safari-pinned-tab.svg" color="#00aba9">
+  <link rel="shortcut icon" href="./meta/favicon.ico">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-config" content="./meta/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="tidychat is an autonomous chat-protection service designed to shield minors from explicit content and online predators">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://tidy.chat">
+  <meta name="twitter:title" content="tidychat">
+  <meta name="twitter:description" content="tidychat is an autonomous chat-protection service designed to shield minors from explicit content and online predators">
+  <meta name="twitter:image" content="https://tidy.chat/meta/thumbail.png">
+  <meta name="twitter:image:alt" content="Broom">
+  <meta name="twitter:creator" content="Externalizable">
+  <meta property="og:title" content="tidychat">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://tidy.chat/meta/thumbnail.png">
+  <meta property="og:url" content="https://tidy.chat">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function() {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#0065d2",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "#ffffff",
+            "border": "#ffffff",
+            "text": "#222"
+          }
+        },
+        "showLink": false,
+        "content": {
+          "message": "This website uses cookies to analyze traffic via anonymized and aggregated data.",
+          "dismiss": "Dismiss"
+        },
+        "position": "bottom-left"
+      })
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120277085-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-120277085-3');
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="content">
+      <div id="intro" class="slot">
+        <img src="./meta/thumbnail.png"></img><br><br>
+        <h1>tidychat</h1>
+        <h2>Tech Demo</h2><br>
+        <h3>tidychat is an autonomous chat-protection service designed to shield minors from explicit content and online predators</h3><br>
+        <h4><a href="https://erics.site/?utm_source=tidy.chat" target="_blank">Eric Huber</a> &copy; 2021</h4>
+        <h4><a href="mailto:webmaster@tidy.chat">Contact</a> • <a href="https://status.tidy.chat/?utm_source=tidy.chat" target="_blank">Status</a></h4>
+      </div>
+      <div id="terminal" class="slot">
+        <form>
+          <input type="text" placeholder="Please enable JavaScript to try tidychat!" maxlength="128" disabled>
+          <i id="status" class="fas fa-exclamation-triangle bad"></i>
+          </input>
+        </form>
+        <div id="client">
+          <span class="description">Client Request</span>
+          <code class="language-json">{}</code>
+          <div class="tag" id="user-info">
+            <span id="author-uid">Please enable JavaScript to try tidychat!</span>
+            <a id="request-data-get" href="#" title="Get User Info"><i class="fas fa-download"></i></a>
+            <a id="request-data-delete" href="#" title="Delete User Info"><i class="fas fa-trash"></i></a>
+            <a id="regenerate-uuid" href="#" title="Regenerate UID"><i class="fas fa-sync-alt"></i></a>
+          </div>
+        </div>
+        <div id="server">
+          <span class="description">tidychat Response</span>
+          <code class="language-json">{}</code>
+          <div class="tag" id="server-data">
+            <span id="response-time">0</span>
+          </div>
+        </div>
+        <div id="legend">
+          <div class="pill">
+            <span class="code" id="200">200</span><span class="code-description">Blacklist</span>
+          </div>
+          <div class="pill">
+            <span class="code" id="201">201</span><span class="code-description">Spam</span>
+          </div>
+          <div class="pill">
+            <span class="code" id="202">202</span><span class="code-description">Privacy</span>
+          </div>
+          <div class="pill">
+            <span class="code" id="203">203</span><span class="code-description">Bad Delay</span>
+          </div>
+          <div class="pill">
+            <span class="code" id="204">204</span><span class="code-description">Bad Length</span>
+          </div>
+          <div class="pill">
+            <span class="code" id="205">205</span><span class="code-description">Shout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://betteruptime.com/widgets/announcement.js" data-id="123207" async="async" type="text/javascript"></script>
+</body>
+
+</html>

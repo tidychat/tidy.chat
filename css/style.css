@@ -99,6 +99,10 @@ input:focus, textarea:focus {
   box-shadow: 0 3px #0065d2 !important
 }
 
+svg.svg-inline--fa {
+  height: 15px
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: #000;
